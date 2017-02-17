@@ -1,0 +1,19 @@
+<div class="container">
+	<h2>Reporting</h2>
+    <p class="text-justify">
+        Choose a Burp XML File to Upload:
+    </p>
+    <button type="file" ngf-select="uploadFiles($file, $invalidFiles)"
+            accept=".xml" ngf-max-height="1000" ngf-max-size="50MB">
+        Select File</button>
+    <br><br>
+    <div ng-show="f.progress >= 0 || errFile">
+        File:
+        <div>{{f.name}} {{errFile.name}} {{errFile.$error}} {{errFile.$errorParam}}
+            <span class="progress" ng-show="f.progress >= 0">
+              <div style="width:{{f.progress}}%" ng-bind="f.progress + '%'"></div>
+            </span>
+        </div>
+        {{errorMsg}}
+    </div>
+</div>
