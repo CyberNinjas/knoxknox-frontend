@@ -1,0 +1,52 @@
+body
+{
+    background: black;
+}
+
+img
+{
+    width: 240px;
+    height: 110px;
+}
+
+h2
+{
+    font-size: 50px;
+    color: #3399ff;
+    text-align: center;
+}
+
+#adminTable
+{
+    margin: auto;
+    border: 2px solid #3399ff;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: lightgrey;
+}
+
+#firstname,#lastname, #workdays, #workhours, #pin, #serialnum
+{
+    font-size: 20px;
+    width: 175px;
+}
+
+#addBtn
+{
+    margin-left: 120px;
+    border-radius: 2px;
+    font-size: 16px;
+    font-family: Georgia, serif;
+}
+
+#backBtn
+{
+    border-radius: 2px;
+    font-size: 16px;
+    font-family: Georgia, serif;
+}
+
+.timeBox
+{
+    width: 75px;
+}

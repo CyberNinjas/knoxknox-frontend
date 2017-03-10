@@ -1,0 +1,39 @@
+body
+{
+    background: black;
+}
+
+img
+{
+    width: 240px;
+    height: 110px;
+}
+
+h2
+{
+    font-size: 50px;
+    color: #3399ff;
+    text-align: center;
+}
+
+#adminTable
+{
+    margin: auto;
+    border: 2px solid #3399ff;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: lightgrey;
+}
+
+#usernameLbl,#passwordLbl
+{
+    font-size: 20px;
+}
+
+#adminBtn
+{
+    margin-left: 100px;
+    border-radius: 2px;
+    font-size: 16px;
+    font-family: Georgia, serif;
+}
