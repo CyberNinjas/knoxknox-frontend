@@ -16,37 +16,41 @@ h2
     text-align: center;
 }
 
-#adminTable
+tr
+{
+    padding: 20px;
+}
+
+#adminTable, #dataTable
 {
     margin: auto;
+    margin-bottom: 50px;
     border: 2px solid #3399ff;
     border-radius: 5px;
     padding: 10px;
     background-color: lightgrey;
+    font-family: Georgia;
 }
 
-#firstname,#lastname, #workdays, #workhours, #pin, #serialnum
+#nameTxt, #emailTxt,
+#pinTxt, #serialnumTxt
 {
-    font-size: 20px;
-    width: 175px;
+    width: 192px;
 }
 
-#addBtn
+#sunSrtTxt, #sunStpTxt,
+#monSrtTxt, #monStpTxt,
+#tuesSrtTxt, #tuesStpTxt,
+#wedSrtTxt, #wedStpTxt,
+#thursSrtTxt, #thursStpTxt,
+#friSrtTxt, #friStpTxt,
+#satSrtTxt, #satStpTxt
 {
-    margin-left: 120px;
-    border-radius: 2px;
-    font-size: 16px;
-    font-family: Georgia, serif;
+    width: 50px;
 }
 
-#backBtn
+#addBtn, #backBtn
 {
-    border-radius: 2px;
-    font-size: 16px;
-    font-family: Georgia, serif;
-}
-
-.timeBox
-{
-    width: 75px;
+    font-size: medium;
+    font-family: Georgia;
 }

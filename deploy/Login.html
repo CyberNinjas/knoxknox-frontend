@@ -1,39 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="Login_StyleSheet.css">
 </head>
 <body>
-<img src="CyberNinjasLogo.jpg">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <script src="Login.js"></script>
 
-<h2>Admin Login</h2>
+    <img src="CyberNinjasLogo.jpg">
 
-<table id="adminTable" cellspacing="10">
-    <tr>
-        <td>
-            <label for="username" id="usernameLbl">User Name:</label>
-        </td>
-        <td>
-            <input type="text" id="username">
-        </td>
-    </tr>
+    <div>
+        <h2>Admin Login</h2>
+    </div>
 
-    <tr>
-        <td>
-            <label for="password" id="passwordLbl">Password:</label>
-        </td>
-        <td>
-            <input type="text" id="password">
-        </td>
-    </tr>
+    <div ng-controller="loginCtrl">
+        <table id="adminTable" cellspacing="10">
+            <tr>
+                <td>
+                    <label for="username" id="usernameLbl">User Name:</label>
+                </td>
+                <td>
+                    <input type="text" id="username"/>
+                </td>
+            </tr>
 
-    <tr>
-        <td colspan="2" ng-controller="LoginController">
-            <button type="button" id="adminBtn">Enter</button>
-        </td>
-    </tr>
-</table>
+            <tr>
+                <td>
+                    <label for="password" id="passwordLbl">Password:</label>
+                </td>
+                <td>
+                    <input type="text" id="password"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <button type="button" id="adminBtn" ng-click="test()">Enter</button>
+                    {{testing}}
+                </td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>

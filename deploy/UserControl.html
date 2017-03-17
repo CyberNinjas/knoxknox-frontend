@@ -6,141 +6,196 @@
     <link rel="stylesheet" type="text/css" href="UserControl_StyleSheet.css">
 </head>
 <body>
-<img src="CyberNinjasLogo.jpg">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <script src="UserControl.js"></script>
 
-<h2>Admin Control</h2>
+    <img src="CyberNinjasLogo.jpg">
 
-<table id="adminTable">
-    <tr>
-        <td>
-            <label for="firstname">First Name:</label>
-        </td>
+    <div>
+        <h2>Admin Control</h2>
+    </div>
 
-        <td>
-            <input type="text" id="firstname">
-        </td>
-    </tr>
+    <div>
+        <table id="adminTable" cellpadding="2">
+            <!-- name -->
+            <tr>
+                <td>
+                    <label id="nameLbl" for="nameTxt">Name:</label>
+                </td>
+                <td>
+                    <input type="text" id="nameTxt"/>
+                </td>
+            </tr>
 
-    <tr>
-        <td>
-            <label for="lastname">Last Name:</label>
-        </td>
+            <!-- email -->
+            <tr>
+                <td>
+                    <label id="emailLbl" for="emailTxt">E-mail:</label>
+                </td>
+                <td>
+                    <input type="text" id="emailTxt"/> <!-- REGEX NEEDED -->
+                </td>
+            </tr>
 
-        <td>
-            <input type="text" id="lastname">
-        </td>
-    </tr>
+            <!-- PIN -->
+            <tr>
+                <td>
+                    <label id="pinLbl" for="pinTxt">PIN:</label>
+                </td>
+                <td>
+                    <input type="text" id="pinTxt"/>
+                </td>
+            </tr>
 
-    <tr>
-        <td>
-            <label>Work Days:</label>
-        </td>
-    </tr>
+            <!-- Yubikey serial number -->
+            <tr>
+                <td>
+                    <label id="serialnumLbl" for="serialnumTxt">Serial #:</label>
+                </td>
+                <td>
+                    <input type="text" id="serialnumTxt"/>
+                </td>
+            </tr>
 
-    <tr>
-        <td>
-            <input type="checkbox">
-            <label for=>Sunday</label>
-        </td>
+            <!-- days of the week -->
+            <!-- sunday -->
+            <tr>
+                <td>
+                    <input type="checkbox" id="sunChk"/>
+                    <label id="sunLbl" for="sunChk">Sun</label> <!-- 24 HOUR CLOCK ENTRY -->
+                </td>
+                <td>
+                    <!-- start time -->
+                    <label id="sunSrtLbl" for="sunSrtTxt">Start:</label>
+                    <input type="text" id="sunSrtTxt"/>
+                    <!-- stop time -->
+                    <label id="sunStpLbl" for="sunStpTxt">Stop:</label>
+                    <input type="text" id="sunStpTxt"/>
+                </td>
+            </tr>
+            <!-- monday -->
+            <tr>
+                <td>
+                    <input type="checkbox" id="monChk"/>
+                    <label id="monLbl" for="monChk">Mon</label>
+                </td>
+                <td>
+                    <!-- start time -->
+                    <label id="monSrtLbl" for="monSrtTxt">Start:</label>
+                    <input type="text" id="monSrtTxt"/>
+                    <!-- stop time -->
+                    <label id="monStpLbl" for="monStpTxt">Stop:</label>
+                    <input type="text" id="monStpTxt"/>
+                </td>
+            </tr>
+            <!-- tuesday -->
+            <tr>
+                <td>
+                    <input type="checkbox" id="tuesChk"/>
+                    <label id="tuesLbl" for="tuesChk">Tues</label>
+                </td>
+                <td>
+                    <!-- start time -->
+                    <label id="tuesSrtLbl" for="tuesSrtTxt">Start:</label>
+                    <input type="text" id="tuesSrtTxt"/>
+                    <!-- stop time -->
+                    <label id="tuesStpLbl" for="tuesStpTxt">Stop:</label>
+                    <input type="text" id="tuesStpTxt"/>
+                </td>
+            </tr>
+            <!-- wednesday -->
+            <tr>
+                <td>
+                    <input type="checkbox" id="wedChk"/>
+                    <label id="wedLbl" for="wedChk">Wed</label>
+                </td>
+                <td>
+                    <!-- start time -->
+                    <label id="wedSrtLbl" for="wedSrtTxt">Start:</label>
+                    <input type="text" id="wedSrtTxt"/>
+                    <!-- stop time -->
+                    <label id="wedStpLbl" for="wedStpTxt">Stop:</label>
+                    <input type="text" id="wedStpTxt"/>
+                </td>
+            </tr>
+            <!-- thursday -->
+            <tr>
+                <td>
+                    <input type="checkbox" id="thursChk"/>
+                    <label id="thursLbl" for="thursChk">Thurs</label>
+                </td>
+                <td>
+                    <!-- start time -->
+                    <label id="thursSrtLbl" for="thursSrtTxt">Start:</label>
+                    <input type="text" id="thursSrtTxt">
+                    <!-- stop time -->
+                    <label id="thursStpLbl" for="thursStpTxt">Stop:</label>
+                    <input type="text" id="thursStpTxt"/>
+                </td>
+            </tr>
+            <!-- friday -->
+            <tr>
+                <td>
+                    <input type="checkbox" id="friChk"/>
+                    <label id="friLbl" for="friChk">Fri</label>
+                </td>
+                <td>
+                    <!-- start time -->
+                    <label id="friSrtLbl" for="friSrtTxt">Start:</label>
+                    <input type="text" id="friSrtTxt"/>
+                    <!-- stop time -->
+                    <label id="friStpLbl" for="friStpTxt">Stop:</label>
+                    <input type="text" id="friStpTxt"/>
+                </td>
+            </tr>
+            <!-- saturday -->
+            <tr>
+                <td>
+                    <input type="checkbox" id="satChk"/>
+                    <label id="satLbl" for="satChk">Sat</label>
+                </td>
+                <td>
+                    <!-- start time -->
+                    <label id="satSrtLbl" for="satSrtTxt">Start:</label>
+                    <input type="text" id="satSrtTxt"/>
+                    <!-- stop time -->
+                    <label id="satStpLbl" for="satStpTxt">Stop:</label>
+                    <input type="text" id="satStpTxt"/>
+                </td>
+            </tr>
 
-        <td>
-            <input type="text" class="timeBox">&nbsp;to&nbsp;<input type="text" class="timeBox">
-        </td>
-    </tr>
+            <!-- Buttons -->
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="button" id="addBtn">Add</button>
+                    <button type="button" id="backBtn">Back</button>
+                </td>
+            </tr>
+        </table>
+    </div>
 
-    <tr>
-        <td>
-            <input type="checkbox">
-            <label>Monday</label>
-        </td>
-
-        <td>
-            <input type="text" class="timeBox">&nbsp;to&nbsp;<input type="text" class="timeBox">
-        </td>
-    </tr>
-
-    <tr>
-        <td>
-            <input type="checkbox">
-            <label>Tuesday</label>
-        </td>
-
-        <td>
-            <input type="text" class="timeBox">&nbsp;to&nbsp;<input type="text" class="timeBox">
-        </td>
-    </tr>
-
-    <tr>
-        <td>
-            <input type="checkbox">
-            <label>Wednesday</label>
-        </td>
-
-        <td>
-            <input type="text" class="timeBox">&nbsp;to&nbsp;<input type="text" class="timeBox">
-        </td>
-    </tr>
-
-    <tr>
-        <td>
-            <input type="checkbox">
-            <label>Thursday</label>
-        </td>
-
-        <td>
-            <input type="text" class="timeBox">&nbsp;to&nbsp;<input type="text" class="timeBox">
-        </td>
-    </tr>
-
-    <tr>
-        <td>
-            <input type="checkbox">
-            <label>Friday</label>
-        </td>
-
-        <td>
-            <input type="text" class="timeBox">&nbsp;to&nbsp;<input type="text" class="timeBox">
-        </td>
-    </tr>
-
-    <tr>
-        <td>
-            <input type="checkbox">
-            <label>Saturday</label>
-        </td>
-
-        <td>
-            <input type="text" class="timeBox">&nbsp;to&nbsp;<input type="text" class="timeBox">
-        </td>
-    </tr>
-
-    <tr>
-        <td>
-            <label for="pin">PIN:</label>
-        </td>
-
-        <td>
-            <input type="text" id="pin">
-        </td>
-    </tr>
-
-    <tr>
-        <td>
-            <label for="serialnum">Serial #:</label>
-        </td>
-
-        <td>
-            <input type="text" id="serialnum">
-        </td>
-    </tr>
-
-    <tr>
-        <td colspan="2">
-            <button type="button" id="addBtn">Add</button>
-            <button type="button" id="backBtn">Back</button>
-        </td>
-    </tr>
-</table>
+    <div>
+        <table id="dataTable" cellpadding="2">
+            <tr>
+                <th>| Name |</th>
+                <th>Email |</th>
+                <th>PIN |</th>
+                <th>Serial # |</th>
+                <th>Schedule |</th>
+                <th>Status |</th>
+                <th>Remove |</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
 
