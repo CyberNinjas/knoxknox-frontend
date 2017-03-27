@@ -1,10 +1,6 @@
 angular.module('myApp', [])
-    .controller('loginCtrl', ['$scope', function($scope){
-        $scope.redirect = function() {
-            $location.path('/knoxknox-frontend/deploy/UserControl.html');
-        };
-
-        $scope.test = function() {
-            $scope.testing = 'it works';
+    .controller('myCtrl', ['$scope', function($scope) {
+        $scope.toUserCtrl = function() {
+            $window.location.href = "/UserControl.html";
         };
     }]);

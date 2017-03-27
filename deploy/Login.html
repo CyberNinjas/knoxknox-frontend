@@ -1,28 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="Login_StyleSheet.css">
 </head>
 <body>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
-    <script src="Login.js"></script>
-
     <img src="CyberNinjasLogo.jpg">
 
-    <div>
+    <div class="header">
         <h2>Admin Login</h2>
     </div>
 
-    <div ng-controller="loginCtrl">
+    <div class="main">
         <table id="adminTable" cellspacing="10">
             <tr>
                 <td>
                     <label for="username" id="usernameLbl">User Name:</label>
                 </td>
                 <td>
-                    <input type="text" id="username"/>
+                    <input type="text" id="username">
                 </td>
             </tr>
 
@@ -31,14 +28,13 @@
                     <label for="password" id="passwordLbl">Password:</label>
                 </td>
                 <td>
-                    <input type="text" id="password"/>
+                    <input type="text" id="password">
                 </td>
             </tr>
 
             <tr>
                 <td colspan="2">
-                    <button type="button" id="adminBtn" ng-click="test()">Enter</button>
-                    {{testing}}
+                    <button type="button" id="adminBtn">Enter</button>
                 </td>
             </tr>
         </table>
