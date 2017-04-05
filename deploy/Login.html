@@ -1,43 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="loginCtrl">
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="Login_StyleSheet.css">
 </head>
 <body>
-    <img src="CyberNinjasLogo.jpg">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+<script src="C:\Users\ztsta\WebstormProjects\knoxknox-frontend"></script>
 
-    <div class="header">
-        <h2>Admin Login</h2>
-    </div>
+<script src="Login.js"></script>
+<script src="userAccount.js"></script>
+<script src="services.js"></script>
 
-    <div class="main">
-        <table id="adminTable" cellspacing="10">
-            <tr>
-                <td>
-                    <label for="username" id="usernameLbl">User Name:</label>
-                </td>
-                <td>
-                    <input type="text" id="username">
-                </td>
-            </tr>
+<img src="CyberNinjasLogo.jpg">
 
-            <tr>
-                <td>
-                    <label for="password" id="passwordLbl">Password:</label>
-                </td>
-                <td>
-                    <input type="text" id="password">
-                </td>
-            </tr>
+<div>
+    <h2>Admin Login</h2>
+</div>
 
-            <tr>
-                <td colspan="2">
-                    <button type="button" id="adminBtn">Enter</button>
-                </td>
-            </tr>
-        </table>
-    </div>
+<div ng-controller="MainCtrl">
+    <table id="adminTable" cellspacing="10">
+        <tr>
+            <td>
+                <label for="username" id="usernameLbl">User Name:</label>
+            </td>
+            <td>
+                <input type="text" id="username"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="password" id="passwordLbl">Password:</label>
+            </td>
+            <td>
+                <input type="text" id="password"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <button type="button" id="adminBtn" ng-click="loginUser()">Enter</button>
+            </td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>
