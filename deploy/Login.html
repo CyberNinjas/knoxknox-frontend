@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="loginCtrl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="Login_StyleSheet.css">
 </head>
-<body>
+<body ng-app="loginCtrl"
+      ng-controller="MainCtrl as user">
+
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
 <script src="C:\Users\ztsta\WebstormProjects\knoxknox-frontend"></script>
 
@@ -19,14 +21,14 @@
     <h2>Admin Login</h2>
 </div>
 
-<div ng-controller="MainCtrl">
+<div>
     <table id="adminTable" cellspacing="10">
         <tr>
             <td>
                 <label for="username" id="usernameLbl">User Name:</label>
             </td>
             <td>
-                <input type="text" id="username"/>
+                <input type="text" id="username" ng-model="user.userData.userName"/>
             </td>
         </tr>
 
@@ -35,13 +37,13 @@
                 <label for="password" id="passwordLbl">Password:</label>
             </td>
             <td>
-                <input type="text" id="password"/>
+                <input type="text" id="password" ng-model="user.userData.password"/>
             </td>
         </tr>
 
         <tr>
             <td colspan="2">
-                <button type="button" id="adminBtn" ng-click="loginUser()">Enter</button>
+                <button type="button" id="adminBtn" ng-click="user.loginUser()">Enter</button>
             </td>
         </tr>
     </table>
